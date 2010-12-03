@@ -1,0 +1,79 @@
+﻿<UserControl xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"  x:Class="SilverlightDataEntry.Views.SearchView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pf="clr-namespace:Caliburn.PresentationFramework;assembly=Caliburn.PresentationFramework"
+    xmlns:am="clr-namespace:Caliburn.PresentationFramework.ApplicationModel;assembly=Caliburn.PresentationFramework"
+    xmlns:Controls="clr-namespace:Caliburn.Silverlight.ApplicationFramework.Controls;assembly=Caliburn.Silverlight.ApplicationFramework"
+    xmlns:dataInput="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.Input"             
+    pf:Message.Attach="[Event Loaded] = [Action LoadContacts]" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+             Width="500">
+
+    <Grid x:Name="LayoutRoot"  Margin="5" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />      
+        </Grid.RowDefinitions>
+        <TextBlock Text="Account Number" Grid.Row="0"/>
+        <TextBox Text="" Grid.Column="1"  Grid.Row="0" Width="120" Name="accountNumber" Margin="4"     />
+        <dataInput:DescriptionViewer Target="{Binding ElementName=lastName}"  Description="Please enter an acount number"  Grid.Column="2"  Grid.Row="0" />
+        <TextBlock Text="Last Name" Grid.Row="1" />
+        <TextBox Text="" Grid.Column="1"  Grid.Row="1" Width="120" Name="lastName"  Margin="4"  />
+        <dataInput:DescriptionViewer Target="{Binding ElementName=lastName}"  Description="Please enter a customer last name"  Grid.Column="2"  Grid.Row="1" />
+        <TextBlock Text="First Name" Grid.Row="2"/>
+        <TextBox Text="" Grid.Column="1"  Grid.Row="2" Width="120" Name="firstName"     />
+        <dataInput:DescriptionViewer Target="{Binding ElementName=lastName}"  Description="Please enter a customer first name"  Grid.Column="2"  Grid.Row="2" />
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Grid.Row="3"
+                    Grid.ColumnSpan="3">
+            <Button Content="Cancel"  pf:Message.Attach="Cancel" />
+            <Button Content="Search"  pf:Message.Attach="Search" />
+        </StackPanel>
+        <TextBlock Grid.Row="4" TextAlignment="Left" Grid.ColumnSpan="4" Text="{Binding SearchStatus, Mode=TwoWay}" Foreground="{StaticResource ShinyPieDataPointBrushOrange}" TextWrapping="Wrap"/>           
+        <TextBlock Grid.Row="5" TextAlignment="Center" Grid.ColumnSpan="4" FontWeight="Bold">
+            <LineBreak />Search Results
+        </TextBlock>
+        <sdk:DataGrid Name="SearchResults" Grid.Row="6" Grid.ColumnSpan="4" ItemsSource="{Binding Results, Mode=TwoWay}" AutoGenerateColumns="False" ClipboardCopyMode="IncludeHeader" FrozenColumnCount="1" IsReadOnly="True" >
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTemplateColumn Header="" >
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Image Source="/Assets/Images/edit.png"  pf:Message.Attach="[Event MouseLeftButtonUp] = [Action EditCustomer($datacontext)]"  Cursor="Hand" ToolTipService.ToolTip="Click on the image to edit the selected customer." />
+                                <Image Source="/Assets/Images/addressbook.png"  pf:Message.Attach="[Event MouseLeftButtonUp] = [Action EditAddress($datacontext)]"  Cursor="Hand" ToolTipService.ToolTip="Click on the image to edit the selected customer address." />
+                            </StackPanel>
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn Binding="{Binding AccountNumber}" Header="Account Number"  />
+                <sdk:DataGridTextColumn Binding="{Binding FullName}" Header="Name"  />
+                <sdk:DataGridTextColumn Binding="{Binding DateOfBirth}" Header="Date of Birth" />
+                <sdk:DataGridTemplateColumn Header="Account Status" SortMemberPath="CustomerAccountStatus">
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding CustomerAccountStatus}" Foreground="{Binding CustomerAccountStatus, Converter={StaticResource AccountTypeToBrushConverter}}" />
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                    </sdk:DataGridTemplateColumn>
+
+                    
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+
+    </Grid>
+   
+    
+</UserControl>

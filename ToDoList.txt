@@ -1,0 +1,11 @@
+Make interfaces for alll of the service communication and load correct instances in App.CreateContainer
+	This would also be useful for the unit testing.  Currently the services are treated as a mocked service.
+	http://blog.roboblob.com/2010/04/11/unit-testable-wcf-web-services-in-mvvm-and-silverlight-4/
+
+Silverlight SDK and toolkit assemblies are expeceted to be in the default folders of:
+	C:\Program Files\Microsoft SDKs\Silverlight\v4.0\Toolkit\Apr10\Bin
+	C:\Program Files\Microsoft SDKs\Silverlight\v4.0\Libraries\Client
+	Ideally this would be moved to the project lib folder for consistency
+
+Make an interface for webserviceresults and add it to the container.  There would be a diagnostic implementation for unit test to review what is 
+	pushed into the lambdas.

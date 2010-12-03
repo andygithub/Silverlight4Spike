@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="SilverlightDataEntry.Views.CustomerDetailsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pf="clr-namespace:Caliburn.PresentationFramework;assembly=Caliburn.PresentationFramework"
+    xmlns:am="clr-namespace:Caliburn.PresentationFramework.ApplicationModel;assembly=Caliburn.PresentationFramework"
+    xmlns:Controls="clr-namespace:Caliburn.Silverlight.ApplicationFramework.Controls;assembly=Caliburn.Silverlight.ApplicationFramework"
+    xmlns:dataInput="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.Input"        
+    mc:Ignorable="d"  Width="450"
+    >
+
+    <Grid x:Name="LayoutRoot" >      
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="10" />
+        </Grid.RowDefinitions>
+        <Border CornerRadius="20" Grid.ColumnSpan="4" Grid.RowSpan="11" BorderThickness="2" BorderBrush="{StaticResource NormalBorderBrush}" />
+        <dataInput:ValidationSummary Margin="4" Grid.Row="1" Grid.ColumnSpan="4"  />
+        <dataInput:Label Target="{Binding ElementName=accountNumber}" Margin="4" Grid.Row="2" Grid.Column="0" />
+        <TextBlock x:Name="accountNumber" Text="{Binding CurrentCustomer.AccountNumber,  Mode=TwoWay}" Grid.Row="2" Grid.Column="1" Margin="4"/>
+        <dataInput:Label Target="{Binding ElementName=lastName}" Margin="4" Grid.Row="3" Grid.Column="0" />
+        <TextBox x:Name="lastName" Text="{Binding CurrentCustomer.LastName,  Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=true}" Grid.Column="1"  Grid.Row="3" Width="120"  />
+        <dataInput:DescriptionViewer Target="{Binding ElementName=lastName}"  Grid.Column="2"  Grid.Row="3" />
+        <dataInput:Label Target="{Binding ElementName=firstName}" Margin="4" Grid.Row="4" Grid.Column="0" />
+        <TextBox x:Name="firstName" Text="{Binding CurrentCustomer.FirstName,  Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=true}" Grid.Column="1"  Grid.Row="4" Width="120"  />
+        <dataInput:DescriptionViewer Target="{Binding ElementName=firstName}" Grid.Column="2"  Grid.Row="4" />
+        <dataInput:Label Target="{Binding ElementName=dateBirth}" Margin="4" Grid.Row="5" Grid.Column="0" />
+        <TextBox x:Name="dateBirth" Text="{Binding CurrentCustomer.DateOfBirth,  Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=true}" Grid.Column="1"  Grid.Row="5" Width="120"  />
+        <dataInput:DescriptionViewer Target="{Binding ElementName=dateBirth}" Grid.Column="2"  Grid.Row="5" />
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Grid.Row="6"
+                    Grid.ColumnSpan="3">
+            <Button Content="Apply"  x:Name="Apply" />
+            <Button Content="Ok"  x:Name="Ok" />
+            <Button Content="Cancel" x:Name="Cancel" />
+            <Button Content="Search" x:Name="Search" />
+
+        </StackPanel>
+        <TextBlock Grid.Row="7" TextWrapping="Wrap" Grid.ColumnSpan="4" Foreground="{StaticResource ShinyPieDataPointBrushOrange}" >
+            <LineBreak />
+            This is a simple example of using DataAnnotations to build a view for display and validation.  
+            <LineBreak />
+            There is not any text in the view for labels and validation messages.  That is populated from the model.<LineBreak />
+            A bold label indicates a required field. <LineBreak />
+            This is using the toolkit for the label, validation summary and description viewer.
+        </TextBlock>
+    </Grid>
+</UserControl>

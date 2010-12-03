@@ -1,0 +1,1 @@
+C:\Users\amaurer\Documents\Visual Studio 2010\Projects\SilverLightDataEntry\SilverlightDataEntry.Service\SilverlightDataEntry.Service.vbproj,634227406561900895,Service1.svc.vb,IService1.vb,My Project\AssemblyInfo.vb,My Project\Application.Designer.vb,My Project\Resources.Designer.vb,My Project\Settings.Designer.vb,

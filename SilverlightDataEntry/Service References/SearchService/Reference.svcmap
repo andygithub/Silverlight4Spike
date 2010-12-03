@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7017e3b9-0cdc-429d-af5b-1d06d04a64b2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:38264/SearchData.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SearchData.xsd" MetadataType="Schema" ID="95bc788d-93e3-4633-9117-ceba2bd806fc" SourceId="1" SourceUrl="http://localhost:38264/SearchData.svc?xsd=xsd2" />
+    <MetadataFile FileName="SearchData1.xsd" MetadataType="Schema" ID="97590de9-fb8c-46dc-824e-22bcd8fb65a1" SourceId="1" SourceUrl="http://localhost:38264/SearchData.svc?xsd=xsd0" />
+    <MetadataFile FileName="SearchData.disco" MetadataType="Disco" ID="95733785-1793-4d91-b989-8b484c673453" SourceId="1" SourceUrl="http://localhost:38264/SearchData.svc?disco" />
+    <MetadataFile FileName="SearchData2.xsd" MetadataType="Schema" ID="fbc7c575-50ff-49c9-bf33-bad221150080" SourceId="1" SourceUrl="http://localhost:38264/SearchData.svc?xsd=xsd1" />
+    <MetadataFile FileName="SearchData.wsdl" MetadataType="Wsdl" ID="0fbcedbf-5220-4b77-8d8e-c4f6f114b5bd" SourceId="1" SourceUrl="http://localhost:38264/SearchData.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

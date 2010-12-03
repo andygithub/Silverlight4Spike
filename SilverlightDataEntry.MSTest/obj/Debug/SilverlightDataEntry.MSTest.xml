@@ -1,0 +1,68 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SilverlightDataEntry.MSTest
+</name>
+</assembly>
+<members>
+<member name="M:SilverlightDataEntry.MSTest.App.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="P:SilverlightDataEntry.MSTest.My.Resources.Messages.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:SilverlightDataEntry.MSTest.My.Resources.Messages.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:SilverlightDataEntry.MSTest.My.Resources.Messages.BlankAddressLine1">
+	<summary>
+  Looks up a localized string similar to You must provide an Address Line 1..
+</summary>
+</member><member name="P:SilverlightDataEntry.MSTest.My.Resources.Messages.CurrentAppointmentType">
+	<summary>
+  Looks up a localized string similar to The current appointment type is .
+</summary>
+</member><member name="P:SilverlightDataEntry.MSTest.My.Resources.Messages.DirtyConsumerAddressOnClose">
+	<summary>
+  Looks up a localized string similar to Consumer Address '{0}' has not been saved.  Do you want to save before closing?.
+</summary>
+</member><member name="P:SilverlightDataEntry.MSTest.My.Resources.Messages.DirtyConsumerOnClose">
+	<summary>
+  Looks up a localized string similar to Consumer '{0}' has not been saved.  Do you want to save before closing?.
+</summary>
+</member><member name="P:SilverlightDataEntry.MSTest.My.Resources.Messages.FirstName">
+	<summary>
+  Looks up a localized string similar to , First Name - .
+</summary>
+</member><member name="P:SilverlightDataEntry.MSTest.My.Resources.Messages.InvalidConsumerAddressOnClose">
+	<summary>
+  Looks up a localized string similar to Consumer Address '{0}' is invalid.  Changes will be lost.  Do you still want to close?.
+</summary>
+</member><member name="P:SilverlightDataEntry.MSTest.My.Resources.Messages.InvalidConsumerOnClose">
+	<summary>
+  Looks up a localized string similar to Consumer '{0}' is invalid.  Changes will be lost.  Do you still want to close?.
+</summary>
+</member><member name="P:SilverlightDataEntry.MSTest.My.Resources.Messages.LastName">
+	<summary>
+  Looks up a localized string similar to , Last Name - .
+</summary>
+</member><member name="P:SilverlightDataEntry.MSTest.My.Resources.Messages.NotEntered">
+	<summary>
+  Looks up a localized string similar to Not Entered .
+</summary>
+</member><member name="P:SilverlightDataEntry.MSTest.My.Resources.Messages.SearchParametersAre">
+	<summary>
+  Looks up a localized string similar to The search parameters are Account Number - .
+</summary>
+</member><member name="T:SilverlightDataEntry.MSTest.My.Resources.Messages">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

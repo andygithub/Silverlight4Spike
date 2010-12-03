@@ -1,0 +1,109 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SilverlightDataEntry
+</name>
+</assembly>
+<members>
+<member name="M:SilverlightDataEntry.Views.LoadScreenView.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:SilverlightDataEntry.Views.CustomerDetailsView.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:SilverlightDataEntry.Model.SearchResults">
+	<summary>
+ Simple read only model class to show how to bind items to a grid.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:SilverlightDataEntry.App.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:SilverlightDataEntry.Views.ToolkitView.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:SilverlightDataEntry.Views.CustomerAddressView.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:SilverlightDataEntry.Views.HomeView.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:SilverlightDataEntry.Views.ShellView.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:SilverlightDataEntry.Views.QuestionView.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:SilverlightDataEntry.Views.SettingsView.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="P:SilverlightDataEntry.My.Resources.Messages.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:SilverlightDataEntry.My.Resources.Messages.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:SilverlightDataEntry.My.Resources.Messages.BlankAddressLine1">
+	<summary>
+  Looks up a localized string similar to You must provide an Address Line 1..
+</summary>
+</member><member name="P:SilverlightDataEntry.My.Resources.Messages.CurrentAppointmentType">
+	<summary>
+  Looks up a localized string similar to The current appointment type is .
+</summary>
+</member><member name="P:SilverlightDataEntry.My.Resources.Messages.DirtyConsumerAddressOnClose">
+	<summary>
+  Looks up a localized string similar to Consumer Address '{0}' has not been saved.  Do you want to save before closing?.
+</summary>
+</member><member name="P:SilverlightDataEntry.My.Resources.Messages.DirtyConsumerOnClose">
+	<summary>
+  Looks up a localized string similar to Consumer '{0}' has not been saved.  Do you want to save before closing?.
+</summary>
+</member><member name="P:SilverlightDataEntry.My.Resources.Messages.FirstName">
+	<summary>
+  Looks up a localized string similar to , First Name - .
+</summary>
+</member><member name="P:SilverlightDataEntry.My.Resources.Messages.InvalidConsumerAddressOnClose">
+	<summary>
+  Looks up a localized string similar to Consumer Address '{0}' is invalid.  Changes will be lost.  Do you still want to close?.
+</summary>
+</member><member name="P:SilverlightDataEntry.My.Resources.Messages.InvalidConsumerOnClose">
+	<summary>
+  Looks up a localized string similar to Consumer '{0}' is invalid.  Changes will be lost.  Do you still want to close?.
+</summary>
+</member><member name="P:SilverlightDataEntry.My.Resources.Messages.LastName">
+	<summary>
+  Looks up a localized string similar to , Last Name - .
+</summary>
+</member><member name="P:SilverlightDataEntry.My.Resources.Messages.NotEntered">
+	<summary>
+  Looks up a localized string similar to Not Entered .
+</summary>
+</member><member name="P:SilverlightDataEntry.My.Resources.Messages.SearchParametersAre">
+	<summary>
+  Looks up a localized string similar to The search parameters are Account Number - .
+</summary>
+</member><member name="T:SilverlightDataEntry.My.Resources.Messages">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:SilverlightDataEntry.Views.SearchView.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member>
+</members>
+</doc>

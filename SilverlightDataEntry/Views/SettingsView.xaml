@@ -1,0 +1,60 @@
+﻿<UserControl xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"  xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"  x:Class="SilverlightDataEntry.Views.SettingsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:pf="clr-namespace:Caliburn.PresentationFramework;assembly=Caliburn.PresentationFramework"
+    xmlns:am="clr-namespace:Caliburn.PresentationFramework.ApplicationModel;assembly=Caliburn.PresentationFramework"
+    xmlns:Controls="clr-namespace:Caliburn.Silverlight.ApplicationFramework.Controls;assembly=Caliburn.Silverlight.ApplicationFramework"
+    mc:Ignorable="d"
+    Width="300"
+             Margin="10">
+
+    <Grid x:Name="LayoutRoot"  >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Appointment Date" />
+        <sdk:DatePicker Grid.Column="1" SelectedDate="{Binding AppointmentDate, Mode=TwoWay}" />
+
+        <TextBlock Text="Earliest Appointment" Grid.Row="1"/>
+        <TextBox Text="{Binding EarliestAppointment, Mode=TwoWay}" Grid.Column="1"  Grid.Row="1"    />
+
+        <TextBlock Text="Latest Appointment" Grid.Row="2"/>
+        <TextBox Text="{Binding LatestAppointment, Mode=TwoWay}" Grid.Column="1"  Grid.Row="2"    />
+        
+        <TextBlock Text="Appointment Types" Grid.Row="3"/>
+        <ComboBox Grid.Column="1"  Grid.Row="3" Name="SelectedAppointmentType" 
+                  ItemsSource="{Binding Source={StaticResource AppointmentTypeCollection}, Mode=OneWay}"
+                  SelectedValue="{Binding Path=SelectedAppointmentType, Converter={StaticResource enumConverter}, Mode=TwoWay}"
+                  pf:Message.Attach="[Event SelectionChanged] = [Action AppointmentTypeModified]"  
+                  />
+        <TextBlock TextAlignment="Center" Foreground="{StaticResource ShinyPieDataPointBrushOrange}" Text="{Binding Status, Mode=OneWay}" Grid.ColumnSpan="2" TextWrapping="Wrap"  Grid.Row="4"/>
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Grid.Row="5"
+                    Grid.ColumnSpan="2">
+            <Button Content="Save"  x:Name="Save" />
+            <Button Content="Cancel" x:Name="Cancel" />
+        </StackPanel>
+        <TextBlock Grid.Row="6" TextWrapping="Wrap" Grid.ColumnSpan="2" Foreground="{StaticResource ShinyPieDataPointBrushOrange}" >
+            <LineBreak />
+            This is a simple example of databinding to properties.  
+            <LineBreak />
+            The drop down list is a resource bound enumeration.  <LineBreak />
+            The label displaying the selecting value of the drop down list highlights messaging the presenter on an event. <LineBreak />
+            The save button is wired up to the event but nothing is saved.
+        </TextBlock>
+    </Grid>
+</UserControl>

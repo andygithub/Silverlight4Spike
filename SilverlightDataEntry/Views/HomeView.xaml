@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="SilverlightDataEntry.Views.HomeView" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d" 
+           Width="200"
+            >
+    <Grid x:Name="LayoutRoot">
+        <StackPanel 
+                    Margin="0 20 0 0">
+            <Button Content="Consumer Search - Data Entry"
+                    x:Name="GotoConsumerSearch" />
+            <Button Content="Toolkit Fun"
+                    x:Name="GotoToolkit"/>
+            <Button Content="Settings"
+                    x:Name="GotoSettings" />
+            <Button Content="Button for show" ToolTipService.ToolTip="This is a nice button" />
+        </StackPanel>
+    </Grid>
+</UserControl>
+

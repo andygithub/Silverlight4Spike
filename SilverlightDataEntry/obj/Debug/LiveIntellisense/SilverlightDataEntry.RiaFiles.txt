@@ -1,0 +1,1 @@
+C:\Users\amaurer\Documents\Visual Studio 2010\Projects\SilverLightDataEntry\SilverlightDataEntry\Generated_Code\SilverlightDataEntry.Service.g.vb

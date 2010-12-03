@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/SilverlightDataEntry.Service" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SilverlightDataEntry.Service" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:38264/SearchData.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfServiceSearchResults">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServiceSearchResults" nillable="true" type="tns:ServiceSearchResults" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfServiceSearchResults" nillable="true" type="tns:ArrayOfServiceSearchResults" />
+  <xs:complexType name="ServiceSearchResults">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Service_AccountNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Service_CustomerAccountStatus" type="tns:AccountStatus" />
+      <xs:element minOccurs="0" name="Service_DateCreated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Service_DateOfBirth" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Service_FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Service_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Service_LastName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceSearchResults" nillable="true" type="tns:ServiceSearchResults" />
+  <xs:simpleType name="AccountStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Failure">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">-10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Warning" />
+      <xs:enumeration value="Good">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AccountStatus" nillable="true" type="tns:AccountStatus" />
+  <xs:complexType name="ServiceConsumer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Service_AccountNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Service_AmountOwed" type="xs:double" />
+      <xs:element minOccurs="0" name="Service_CustomerAccountStatus" type="tns:AccountStatus" />
+      <xs:element minOccurs="0" name="Service_CustomerLevel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Service_DateCreated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Service_DateOfBirth" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Service_FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Service_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Service_LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Service_OrderCount" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceConsumer" nillable="true" type="tns:ServiceConsumer" />
+  <xs:complexType name="ServiceConsumerAdress">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Service_AccountNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Service_Address1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Service_Address2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Service_City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Service_FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Service_Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Service_LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Service_State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Service_Zip" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServiceConsumerAdress" nillable="true" type="tns:ServiceConsumerAdress" />
+</xs:schema>

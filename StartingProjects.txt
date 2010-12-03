@@ -1,0 +1,4 @@
+To start the silverlight project set the page: SilverlightDataEntryTestPage.aspx to be the default page.
+To run the silverlight unit test project set the page: SilverlightDataEntry.MSTestTestPage.aspx to be the default page.
+
+The web site application needs to be the default project.

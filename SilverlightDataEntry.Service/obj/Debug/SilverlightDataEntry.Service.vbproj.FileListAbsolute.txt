@@ -1,0 +1,10 @@
+C:\Users\amaurer\Documents\Visual Studio 2010\Projects\SilverLightDataEntry\SilverlightDataEntry.Service\bin\SilverlightDataEntry.Service.dll
+C:\Users\amaurer\Documents\Visual Studio 2010\Projects\SilverLightDataEntry\SilverlightDataEntry.Service\bin\SilverlightDataEntry.Service.pdb
+C:\Users\amaurer\Documents\Visual Studio 2010\Projects\SilverLightDataEntry\SilverlightDataEntry.Service\bin\SilverlightDataEntry.Service.xml
+C:\Users\amaurer\Documents\Visual Studio 2010\Projects\SilverLightDataEntry\SilverlightDataEntry.Service\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\amaurer\Documents\Visual Studio 2010\Projects\SilverLightDataEntry\SilverlightDataEntry.Service\obj\Debug\SilverlightDataEntry.Service.Resources.resources
+C:\Users\amaurer\Documents\Visual Studio 2010\Projects\SilverLightDataEntry\SilverlightDataEntry.Service\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\amaurer\Documents\Visual Studio 2010\Projects\SilverLightDataEntry\SilverlightDataEntry.Service\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\amaurer\Documents\Visual Studio 2010\Projects\SilverLightDataEntry\SilverlightDataEntry.Service\obj\Debug\SilverlightDataEntry.Service.dll
+C:\Users\amaurer\Documents\Visual Studio 2010\Projects\SilverLightDataEntry\SilverlightDataEntry.Service\obj\Debug\SilverlightDataEntry.Service.xml
+C:\Users\amaurer\Documents\Visual Studio 2010\Projects\SilverLightDataEntry\SilverlightDataEntry.Service\obj\Debug\SilverlightDataEntry.Service.pdb

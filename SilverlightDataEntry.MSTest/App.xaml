@@ -1,0 +1,18 @@
+﻿<am:CaliburnApplication xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:am="clr-namespace:Caliburn.PresentationFramework.ApplicationModel;assembly=Caliburn.PresentationFramework"
+             xmlns:Converters="clr-namespace:Caliburn.Silverlight.ApplicationFramework.Converters;assembly=Caliburn.Silverlight.ApplicationFramework"
+             xmlns:Model="clr-namespace:SilverlightDataEntry.Model;assembly=SilverlightDataEntry"
+             x:Class="SilverlightDataEntry.MSTest.App"
+             >
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary  Source="Assets/ShinyBlueTheme.xaml" />
+                <ResourceDictionary  Source="Assets/Caliburn.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</am:CaliburnApplication>
